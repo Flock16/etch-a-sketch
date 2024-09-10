@@ -3,7 +3,6 @@ const rangeSelector = document.querySelector(".range");
 const rangeSelected = document.querySelector(".range-selected");
 const rainbowButton = document.querySelector(".rainbowButton");
 const colorWheel = document.querySelector(".colorWheel");
-
 let rainbow = false;
 
 rangeSelector.addEventListener("input", (event) => {
