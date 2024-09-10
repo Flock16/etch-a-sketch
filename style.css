@@ -1,0 +1,33 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: orange;
+  border: solid black;
+  height: 800px;
+  width: 800px;
+
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.cell {
+  background-color: blue;
+  width: calc(100% / 16);
+  height: calc(100% / 16);
+
+  border: 1px solid black;
+}
