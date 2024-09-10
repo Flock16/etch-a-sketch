@@ -4,10 +4,12 @@ const rangeSelected = document.querySelector(".range-selected");
 const rainbowButton = document.querySelector(".rainbowButton");
 const colorWheel = document.querySelector(".colorWheel");
 
+let rainbow = false;
+
 rangeSelector.addEventListener("input", (event) => {
   clearGrid();
   rangeSelected.textContent = event.target.value + "x" + event.target.value;
-  createGrid(event.target.value, colorWheel.value);
+  createGrid(event.target.value, rainbow ? "rainbow" : colorWheel.value);
 });
 
 const addListener = (element, color) => {
@@ -61,11 +63,13 @@ const createGrid = (size, color) => {
 
 rainbowButton.addEventListener("click", () => {
   clearGrid();
+  rainbow = true;
   createGrid(rangeSelector.value, "rainbow");
 });
 
 colorWheel.addEventListener("input", (event) => {
   clearGrid();
+  rainbow = false;
   createGrid(rangeSelector.value, event.target.value);
 });
 
